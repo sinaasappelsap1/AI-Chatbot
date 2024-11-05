@@ -1,0 +1,11 @@
+.chat-input-container {
+    display: flex;
+    margin-top: 15px;
+    }
+  
+  .chat-input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  

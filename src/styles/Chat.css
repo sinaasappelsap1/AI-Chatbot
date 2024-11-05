@@ -1,29 +1,9 @@
 .chat-container {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .chat-messages {
-    margin-bottom: 20px;
-    height: 400px;
-    overflow-y: auto;
-    border: 1px solid #c2d8f9;
-    background-color: #f9fafd;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .chat-message {
-    margin-bottom: 10px;
-  }
-  
-  .chat-send-container {
-    display: flex;
-  }
-  
-  .chat-input {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}

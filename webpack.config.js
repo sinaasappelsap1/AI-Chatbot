@@ -2,47 +2,42 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/'
   },
   mode: 'development',
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      react: path.resolve('./node_modules/react'),
-    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   module: {
     rules: [
       
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       },
       
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       
       {
-        test: /\.(svg|png|jpg|jpeg|gif|woff|woff2|eot|ttf)$/,
-        type: 'asset/resource',
-      },
-    ],
+        test: /\.(woff|woff2|eot|ttf|svg|png|jpg)$/,
+        type: 'asset/resource'
+      }
+    ]
   },
   devServer: {
     static: './dist',
-    historyApiFallback: true,
-    hot: true, 
-    port: 3000,
+    historyApiFallback: true
   },
   plugins: [
-    new Dotenv(), 
-  ],
+    new Dotenv()
+  ]
 };

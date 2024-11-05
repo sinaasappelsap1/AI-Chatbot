@@ -1,7 +1,7 @@
 import React from 'react';
 import Chat from './components/Chat';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <Chat />
