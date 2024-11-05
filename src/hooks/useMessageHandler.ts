@@ -1,4 +1,4 @@
-// A custom hook that covers message handling. It sends user messages to the AI API and handles responses.
+// A custom hook that covers message handling
 import { useState, useCallback } from 'react';
 import axios from 'axios';
 
